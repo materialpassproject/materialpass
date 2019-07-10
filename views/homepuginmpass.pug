@@ -1,0 +1,355 @@
+
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="author" content="Dashboard" />
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" />
+  <title>Title</title>
+  <link type="image/png" href="images/adityalogo.png" rel="icon" />
+  <!-- Bootstrap core CSS-->
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+  <script src="javascripts/jquery-1.11.1.min.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+  <!-- external css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- Custom styles for this template-->
+  <link href="stylesheets/style1.css" rel="stylesheet" />
+  <link href="stylesheets/style.css" rel="stylesheet" />
+  <link href="stylesheets/style-responsive.css" rel="stylesheet" />
+  <!-- Data tables CSS-->
+  <link rel="stylesheet" type="text/css" href="stylesheets/buttons.dataTables.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/jquery.dataTables.min.css" />
+  <link href="stylesheets/dataTables.bootstrap.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/home.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/home1.css" />
+  <!-- form links-->
+  <link rel="stylesheet" type="text/css" href="stylesheets/mform1.css" />
+  <script src="javascripts/autocomplete.js"></script>
+  <!--new table links -->
+  <script src="javascripts/newtable.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/newtable.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+  <section id="container">
+    <!-- header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!-- logo start--><a class="logo" href="#"><b><img src="images/myhub_logo.png" style="height:55px;width:100px;margin-top:-13px;" /></b></a>
+      <!-- logo end-->
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- header end-->
+    <!-- sidebar start-->
+    <aside>
+      <div class="nav-collapse" id="sidebar">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="#"><img class="img-circle" src="images/user.png" width="80" /></a></p>
+          <h5 class="centered">
+            <p>My Project</p>
+          </h5>
+          <li class="sub-menu"><a data-toggle="tab" href="#tab1"><i class="fa fa-file-text"></i><span>Form</span></a></li>
+          <li class="sub-menu"><a data-toggle="tab" href="#tab2"><i class="fa fa-database"></i><span>Data Base</span></a></li>
+          <li class="sub-menu"><a data-toggle="tab" href="#tab3"><i class="fa fa-upload"></i><span>Return</span></a></li>
+        </ul>
+      </div>
+        <!-- sidebar menu end-->
+        <!-- sidebar end-->
+        <!-- main content start-->
+        <section id="main-content">
+          <section class="wrapper site-min-height">
+            <div class="row mt">
+              <div class="col-lg-12">
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id="tab1">
+                    <center>
+                      <div class="row dashboard-stats container">
+                        <div class="col-md-2 col-sm-6 col-md-offset-6">
+                          <section class="panel panel-box">
+                            <div class="panel-left panel-icon bg-lovender"><i class="fa fa-file-text"></i></div>
+                            <div class="panel-right panel-icon bg-reverse">
+                              <p class="text-muted no-margin text"><span> </span></p>
+                              <p class="size-h1">Form</p>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                      <center>
+                        <div class="container" style="background-color: #eaeaea;width: 100%;height:100%;border-radius: 1px;">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <!-- code here-->
+                              <div class="form-group">
+                                <div class="well">
+                                  <h1 align="center"><b>ADITYA EDUCATIONAL INSTITUTIONS</b></h1>
+                                  <h3 align="center"><b>SURAMPALEM</b></h3>
+                                </div>
+                                <!-- form-->
+                                <form action="/save" method="post">
+                                  <div class="well col-md-12">
+                                    <h3>MATERIAL OUTWARD PASS</h3>
+                                    <hr style="border-color: red;" /><br />
+                                    <label class="col-md-1">Outward no:</label>
+                                    <div class="col-md-2">
+                                      <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-sort-numeric-desc" arial-hidden="true"></i></span>
+                                        <input class="form-control" type="text" name="outwardno" value="" placeholder="outward number" style="border-radius: 10px; font-size:13px;" />
+                                      </div>
+                                    </div>
+                                    <label class="col-md-1">Reason</label>
+                                    <select class="col-md-1 custom-select" name="reason" style="width:100px; padding: 5px; border-radius:20%;">
+                                      <option value="supply">supply</option>
+                                      <option value="repair">repair</option>
+                                      <option value="issue">issue</option>
+                                      <option value="exchange">exchange</option>
+                                    </select>
+                                    <label class="col-md-1">Date:</label>
+                                    <div class="col-md-3">
+                                      <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-calendar" arial-hidden="true"></i></span>
+                                        <input class="form-control" type="date" name="date" style="border-radius: 10px;" />
+                                      </div>
+                                    </div>
+                                    <label class="col-md-1">Time:</label>
+                                    <div class="col-md-1">
+                                      <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-clock-o" arial-hidden="true"></i></span>
+                                        <input class="form-control" type="time" name="time" style="border-radius: 10px;" />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="row">
+                                <div class="ui-widget">
+                                  <div class="form-group col-md-4" style="margin-left: 90px;">
+                                    <label class="control-label col-md-5" for="source"><b>Source:</b></label>
+                                    <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-circle" arial-hidden="true"></i></span>
+                                      <input class="form-control" id="source" name="from" placeholder="from place" style="border-radius: 10px;" />
+                                    </div>
+                                  </div>
+                                  <div class="form-group col-md-4" style="margin-left: 90px;">
+                                    <label class="control-label col-md-5" for="destination"><b>Destination:</b></label>
+                                    <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-map-marker" arial-hidden="true"></i></span>
+                                      <input class="form-control" id="destination" name="to" placeholder="to place" style="border-radius: 10px;" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- table-->
+                                <div class="row clearfix">
+                                  <div class="col-md-12 table-responsive">
+                                  <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                                    <thead>
+                                      <tr>
+                                        <th class="text-center">Serial No</th>
+                                        <th class="text-center">Material</th>
+                                        <th class="text-center">Quantity</th>
+                                        <th class="text-center">Returnable</th>
+                                        <th class="text-center">Date</th>
+                                        <th class="text-center">Time</th>
+                                        <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">Delete
+                                        </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr id='addr0' data-id="0" class="hidden">
+                                        <td data-name="serialno">
+                                          <input type="text" name='serialno0'  placeholder='serialno' class="form-control"/>
+                                        </td>
+                                        <td data-name="material">
+                                          <input type="text" name='material0' placeholder='material' class="form-control"/>
+                                        </td>
+                                        <td data-name="quantity">
+                                          <input type="text" name="quantity0" placeholder="quantity" class="form-control"/>
+                                        </td>
+                                        <td data-name="returnable">
+                                          <select name="returnable0">
+                                            <option value="">Select Option</option>
+                                            <option value="1">yes</option>
+                                            <option value="2">no</option>
+                                          </select>
+                                        </td>
+                                        <td data-name="date">
+                                          <input type="date" name='date0'  class="form-control"/>
+                                        </td>
+                                        <td data-name="time">
+                                          <input type="time" name='time0'  class="form-control"/>
+                                        </td>
+                                        <td data-name="del">
+                                          <button nam="del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>
+                                        </td>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <a id="add_row" class="btn btn-default pull-right">Add Row</a>
+                            </div>
+                            </div>
+                          </div>
+                      </center>
+                      <div class="container">
+                        <div class="row">
+                          <h3>Transport Details</h3>
+                          <hr style="border-color: red;" align="left" width="90%" />
+                          <div class="form-group col-md-4" style="margin-left: 90px; ;">
+                            <label class="control-label col-md-5"><b>Vehicle Number:</b></label>
+                            <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-bus" arial-hidden="true"></i></span>
+                              <input class="form-control" type="text" name="vno" placeholder="enter vehicle number" style="border-radius: 20px; font-size:15px;" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4" style="margin-left: 90px;">
+                            <label class="control-label col-md-5"><b>Vehicle Type:</b></label>
+                            <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-truck" arial-hidden="true"></i></span>
+                              <input class="form-control" type="text" name="vtype" placeholder="enter type of vehicle" style="border-radius:20px; font-size:15px;" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4" style="margin-left: 90px;">
+                            <label class="control-label col-md-5">Person Name :</label>
+                            <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-user-o" arial-hidden="true"></i></span>
+                              <input class="form-control" type="text" name="name1" placeholder=" Driver Name" style="border-radius:20px ; font-size:15px;" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4" style="margin-left: 90px;">
+                            <label class="control-label col-md-5">Person No:</label>
+                            <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-phone-square" arial-hidden="true"></i></span>
+                              <input class="form-control" type="text" name="pno" placeholder=" Driver Number" style="border-radius: 20px; font-size:15px;" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4" style="margin-left: 90px;">
+                            <label class="control-label col-md-5">Contact No :</label>
+                            <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-phone" arial-hidden="true"></i></span>
+                              <input class="form-control" type="text" name="cno" placeholder="sender contact number" style="border-radius: 20px; font-size:15px;" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="ui-widget">
+                            <div class="form-group col-md-4" style="margin-left: 90px;">
+                              <label class="control-label col-md-5">Insructed By</label>
+                              <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-user-secret" arial-hidden="true"></i></span>
+                                <input class="form-control" id="splperson" type="text" name="splperson" placeholder="Instructed By" style="border-radius: 20px; font-size:15px;" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4" style="margin-left: 90px;">
+                            <label class="control-label col-md-5">Remarks :</label>
+                            <div class="input-group"><span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-exclamation" arial-hidden="true"></i></span>
+                              <textarea class="form-control" placeholder="enter opinion" name="remarks" style="border-radius: 20px;"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <center>
+                        <button class="btn btn-info">
+                          <input type="submit" name="save" value="save" style="color:black;" />
+                        </button>
+                      </center>
+                    </center>
+                  </div>
+                  <div class="tab-pane fade align" id="tab2">
+                    <center>
+                      <div class="row dashboard-stats container">
+                        <div class="col-md-2 col-sm-6 col-md-offset-6">
+                          <section class="panel panel-box">
+                            <div class="panel-left panel-icon bg-lovender"><i class="fa fa-database"></i></div>
+                            <div class="panel-right panel-icon bg-reverse">
+                              <p class="text-muted no-margin text"><span> </span></p>
+                              <p class="size-h1">Data base</p>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                      <center>
+                        <div class="container" style="background-color: #eaeaea;width: 100%;height:100%;border-radius: 1px;">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <!-- code here-->
+                            </div>
+                          </div>
+                        </div>
+                      </center>
+                    </center>
+                  </div>
+                  <div class="tab-pane fade align" id="tab3">
+                    <center>
+                      <div class="row dashboard-stats container">
+                        <div class="col-md-2 col-sm-6 col-md-offset-6">
+                          <section class="panel panel-box">
+                            <div class="panel-left panel-icon bg-lovender"><i class="fa fa-upload"></i></div>
+                            <div class="panel-right panel-icon bg-reverse">
+                              <p class="text-muted no-margin text"><span> </span></p>
+                              <p class="size-h1">Return</p>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                      <center>
+                        <div class="container" style="background-color: #eaeaea;width: 100%;height:100%;border-radius: 1px;">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <!-- code here-->
+                              <!-- MAIN CONTENT-->
+                              <!-- main content end-->
+                              <!-- js placed at the end of the document so the pages load faster-->
+                              <script src="javascripts/jquery.js"></script>
+                              <script src="javascripts/bootstrap.min.js"></script>
+                              <script src="javascripts/jquery-ui-1.9.2.custom.min.js"></script>
+                              <script src="javascripts/jquery.ui.touch-punch.min.js"></script>
+                              <script src="javascripts/jquery.dcjqaccordion.2.7.js"></script>
+                              <script src="javascripts/jquery.scrollTo.min.js"></script>
+                              <script src="javascripts/jquery.nicescroll.js"></script>
+                              <!-- common script for all pages-->
+                              <script src="javascripts/common-scripts.js"></script>
+                              <script src="javascripts/jquery.dataTables.min.js"></script>
+                              <script src="javascripts/dataTables.buttons.min.js"></script>
+                              <script src="javascripts/buttons.flash.min.js"></script>
+                              <script src="javascripts/jszip.min.js"></script>
+                              <script src="javascripts/pdfmake.min.js"></script>
+                              <script src="javascripts/vfs_fonts.js"></script>
+                              <script src="javascripts/buttons.html5.min.js"></script>
+                              <script src="javascripts/buttons.print.min.js"></script>
+                            </div>
+                          </div>
+                        </div>
+                      </center>
+                    </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </aside>
+  </section>
+<body background="bg.jpeg " style="background-size: cover";> 
+<div class="well col-md-12">
+  <div class="col-md-3"><button id="nav-toggle"></button></div>
+  <div class="col-md-1"><img src="adityalogo.jpeg" style="width:70px;height:70px;"></div>
+  <div class="col-md-7"><h1 style="color:black;">Aditya Engineering College</h1></div>
+  <div class="col-md-1"><button class="btn btn-info">
+    <a href="/logout">Logout</a>
+  </button></div>
+  </div>
+<nav><br><br>
+=======

@@ -1,0 +1,120 @@
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js')
+script(src='javascripts/addtable.js')
+#cb.tab-pane.fade
+  .row.dashboard-stats.container
+    .col-md-2.col-sm-6.col-md-offset-8
+      section.panel.panel-box
+        .panel-left.panel-icon.bg-success
+          i.fa.fa-book
+        .panel-right.panel-icon.bg-reverse
+          p.text-muted.no-margin.text
+            span
+          strong
+            p.size-h2(style='margin-top:10px;') Research
+  .personal_details
+    h3 Chapters/Books
+    center
+      p(style='color:red;')
+      .table-responsive
+        table
+          tbody
+            tr
+              td
+                label#name Title with Page No's:
+              td
+                input#ctitle.form-control.input-sm(type='text', name='qualification', size='20')
+              td
+                label#name Publisher :
+              td
+                input#cpublisher.form-control.input-sm(type='text', name='qualification', size='20')
+            tr
+              td
+                br
+                label#name ISSN/ISBN NO:
+              td
+                br
+                input#cisbn.form-control.input-sm(type='text', name='qualification', size='20')
+              td
+                br
+                label#name Specify Author :
+              td
+                br
+                select#cauthor.form-control.input-sm
+                  option(value='')  --select--
+                  option(value='Author 1') Author 1
+                  option(value='Author 2') Author 2
+                  option(value='Author 3') Author 3
+                  option(value='Author 4') Author 4
+                  option(value='Author 5') Author 5
+                  option(value='Author 6') Author 6
+            tr
+              td(align='left')
+                br
+                label#name Month :
+              td
+                br
+                select#cmonth.form-control.input-sm
+                  option(value='')  --select--
+                  option(value='January') January
+                  option(value='February') February
+                  option(value='March') March
+                  option(value='April') April
+                  option(value='May') May
+                  option(value='June') June
+                  option(value='July') July
+                  option(value='August') August
+                  option(value='September') September
+                  option(value='October') October
+                  option(value='November') November
+                  option(value='December') December
+              td(align='left')
+                br
+                label#name Year :
+              td
+                br
+                input#cyear.form-control.input-sm(type='text', placeholder='YYYY', name='qualification', size='20', onkeypress='return event.charCode >= 48 && event.charCode <= 57', maxlength='4', minlength='4', required='required')
+            tr
+              td(align='center', colspan='4')
+                br
+                br
+                input#addbtn-c.btn.btn-info(type='button', value='ADD', onclick='JSalert()')
+        br
+  br
+  br
+  //- .row.personal_details
+  //-   center
+  //-     h3 List of Under Graduation Courses
+  //-   br
+  //-   .col-lg-1
+  //-   .col-lg-10
+  //-     // Advanced Tables
+  //-     .panel.panel-default
+  //-       .panel-body
+  //-         .table-responsive
+  //-           table#dataTables-example.table.table-striped.table-bordered.table-hover
+  //-             thead
+  //-               tr
+  //-                 th.text-center Course
+  //-                 th.text-center Year of Passing 
+  //-                 th.text-center Institution
+  //-                 th.text-center Percentage
+  //-                 th.text-center Action
+
+  //-               tbody.ug
+  //-                 if user.UG
+  //-                   -for (var i = user.UG.length-1; i >=0; --i) {
+  //-                     tr.removerow2
+  //-                       td.text-center#uc
+  //-                         p(style="margin-top: 8px;")=user.UG[i].Course
+  //-                       td.text-center#uy
+  //-                         p(style="margin-top: 8px;")=user.UG[i].Year
+  //-                       td.text-center#ui
+  //-                         p(style="margin-top: 8px;")=user.UG[i].Institution
+  //-                       td.text-center#up
+  //-                         p(style="margin-top: 8px;")=user.UG[i].Percentage
+  //-                         //Action Button
+  //-                       td.text-center
+  //-                         button.remUG.btn.btn-warning
+  //-                           span.glyphicon.glyphicon-trash
+  //-                           |  &nbsp;Remove
+  //-                   -}

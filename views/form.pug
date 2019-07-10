@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Add Row</title>
+  <!-- bootstrap links-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- autocomplete-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- table-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="https://use.fontawesome.com/0d4dee6319.js"></script>
+  <!-- font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/mform1.css">
+  <script src="javascripts/autocomplete.js"></script>
+  <!-- new table links-->
+  <!--script(src='javascripts/newtable.js')-->
+  <link rel="stylesheet" type="text/css" href="stylesheets/addtable.css">
+  <script src="javascripts/addtable.js"></script>
+</head>
+
+<body>
+  <div class="col-md-12">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="form-group">
+        <div class="well">
+          <h1 align="center"><b>ADITYA EDUCATIONAL INSTITUTIONS</b></h1>
+          <h3 align="center"><b>SURAMPALEM</b></h3>
+        </div>
+        <!-- form-->
+        <form action="/save" method="post">
+          <div class="well col-md-12">
+            <h3>MATERIAL OUTWARD PASS</h3>
+            <hr style="border-color: red;"><br>
+            <label class="col-md-1">Outward no:</label>
+            <div class="col-md-2">
+              <div class="input-group"><span class="input-group-addon"><i class="fa fa-sort-numeric-desc" arial-hidden="true"></i></span>
+                <input class="form-control" type="text" name="outwardno" value="" placeholder="outward number" style="border-radius: 10px; font-size:13px;">
+              </div>
+            </div>
+            <label class="col-md-1">Reason</label>
+            <select class="col-md-1 custom-select" name="reason" style="width:100px; padding: 5px; border-radius:20%;">
+              <option value="supply">supply</option>
+              <option value="repair">repair</option>
+              <option value="issue">issue</option>
+              <option value="exchange">exchange</option>
+            </select>
+            <label class="col-md-1">Date:</label>
+            <div class="col-md-3">
+              <div class="input-group"><span class="input-group-addon"><i class="fa fa-calendar" arial-hidden="true"></i></span>
+                <input class="form-control" type="date" name="date" style="border-radius: 10px;">
+              </div>
+            </div>
+            <label class="col-md-1">Time:</label>
+            <div class="col-md-1">
+              <div class="input-group"><span class="input-group-addon"sssss><i class="fa fa-clock-o" arial-hidden="true"></i></span>
+                <input class="form-control" type="time" name="time" style="border-radius: 10px;">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- table-->
+      <div class="container col-md-12">
+        <div class="row clearfix">
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+              <thead>
+                <tr>
+                  <th class="text-center">Serial No</th>
+                  <th class="text-center">Material</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-center">Returnable</th>
+                  <th class="text-center">Date</th>
+                  <th class="text-center">Time</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-name="serialno">
+                    <input class="form-control" id="sno" type="text" name="serialno" placeholder="serialno">
+                  </td>
+                  <td data-name="material">
+                    <input class="form-control" id="material" type="text" name="material" placeholder="material">
+                  </td>
+                  <td data-name="quantity">
+                    <input class="form-control" id="quantity" type="text" name="quantity" placeholder="quantity">
+                  </td>
+                  <td data-name="returnable">
+                    <select id="select" name="select">
+                      <option value="">Select Option</option>
+                      <option value="1">yes</option>
+                      <option value="2">no</option>
+                    </select>
+                  </td>
+                  <td data-name="date">
+                    <input class="form-control" id="date" type="date" name="date0">
+                  </td>
+                  <td data-name="time">
+                    <input class="form-control" id="time" type="time" name="time0">
+                  </td>
+                  <td align="center" colspan="4">
+                    <input class="btn btn-info" id="addbtn-c" type="button" value="ADD" onclick="JSalert()">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="container col-md-12">
+        <div class="row">
+          <h3>Transport Details</h3>
+          <hr style="border-color: red;" align="left" width="90%">
+          <div class="row">
+            <div class="ui-widget">
+              <div class="form-group col-md-5" style="margin-left: 90px;">
+                <label class="control-label col-md-5" for="source"><b>Source:</b></label>
+                <div class="input-group"><span class="input-group-addon" ><i class="fa fa-circle" arial-hidden="true"></i></span>
+                  <input class="form-control" id="source" name="from" placeholder="from place" style="border-radius: 10px;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="ui-widget">
+              <div class="form-group col-md-5" style="margin-left: 90px;">
+                <label class="control-label col-md-5" for="destination"><b>Destination:</b></label>
+                <div class="input-group"><span class="input-group-addon" ><i class="fa fa-map-marker" arial-hidden="true"></i></span>
+                  <input class="form-control" id="destination" name="to" placeholder="to place" style="border-radius: 10px;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-5" style="margin-left: 90px;">
+              <label class="control-label col-md-5">Contact No :</label>
+              <div class="input-group"><span class="input-group-addon" ><i class="fa fa-phone" arial-hidden="true"></i></span>
+                <input class="form-control" type="text" name="cno" placeholder="sender contact number" style="border-radius: 10px; font-size:15px;">
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-md-5" style="margin-left: 90px; ;">
+            <label class="control-label col-md-5"><b>Vehicle Number:</b></label>
+            <div class="input-group"><span class="input-group-addon" ><i class="fa fa-bus" arial-hidden="true"></i></span>
+              <input class="form-control" type="text" name="vno" placeholder="enter vehicle number" style="border-radius: 10px; font-size:15px;">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-5" style="margin-left: 90px;">
+            <label class="control-label col-md-5"><b>VehicleType:</b></label>
+            <div class="input-group"><span class="input-group-addon" ><i class="fa fa-truck" arial-hidden="true"></i></span>
+              <input class="form-control" type="text" name="vtype" placeholder="enter type of vehicle" style="border-radius:10px; font-size:15px;">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-5" style="margin-left: 90px;">
+            <label class="control-label col-md-5">Person Name:</label>
+            <div class="input-group"><span class="input-group-addon" ><i class="fa fa-user-o" arial-hidden="true"></i></span>
+              <input class="form-control" type="text" name="name1" placeholder=" Driver Name" style="border-radius:10px ; font-size:15px;">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-5" style="margin-left: 90px;">
+            <label class="control-label col-md-5">Person No:</label>
+            <div class="input-group"><span class="input-group-addon" ><i class="fa fa-phone-square" arial-hidden="true"></i></span>
+              <input class="form-control" type="text" name="pno" placeholder=" Driver Number" style="border-radius: 10px; font-size:15px;">
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="ui-widget">
+            <div class="form-group col-md-5" style="margin-left: 90px;">
+              <label class="control-label col-md-5">Insructed By</label>
+              <div class="input-group"><span class="input-group-addon" ><i class="fa fa-user-secret" arial-hidden="true"></i></span>
+                <input class="form-control" id="splperson" type="text" name="splperson" placeholder="Instructed By" style="border-radius: 10px; font-size:15px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-5" style="margin-left: 90px;">
+            <label class="control-label col-md-5">Remarks :</label>
+            <div class="input-group"><span class="input-group-addon" ><i class="fa fa-exclamation" arial-hidden="true"></i></span>
+              <textarea class="form-control" placeholder="enter opinion" name="remarks" style="border-radius: 10px;"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container col-md-12">
+        <center>
+          <button class="btn btn-info">
+            <input type="submit" name="save" value="save" style="color:black;">
+          </button>
+        </center>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+doctype html
+html
+  head
+    title Add Row
+    // bootstrap links
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+    // autocomplete
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    // table
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='https://use.fontawesome.com/0d4dee6319.js')
+    // font awesome
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/mform1.css')
+    script(src='javascripts/autocomplete.js')
+    // new table links
+    // script(src='javascripts/newtable.js')
+    link(rel='stylesheet', type='text/css', href='stylesheets/addtable.css')
+    script(src='javascripts/addtable.js')
+  body
+    .col-md-12
+      .col-md-10.col-md-offset-1
+        .form-group
+          .well
+            h1(align='center')
+              b ADITYA EDUCATIONAL INSTITUTIONS
+            h3(align='center')
+              b SURAMPALEM
+          // form
+          form(action='/save', method='post')
+            .well.col-md-12
+              h3 MATERIAL OUTWARD PASS
+              hr(style='border-color: red;')
+              br
+              label.col-md-1 Outward no:
+              .col-md-2
+                .input-group
+                  span.input-group-addon
+                    i.fa.fa-sort-numeric-desc(arial-hidden='true')
+                  input.outwardno.form-control(type='text', name='outwardno', value='', placeholder='outward number', style='border-radius: 10px; font-size:13px;')
+              label.col-md-1 Reason
+              select#select1.col-md-1.custom-select(name='reason', style='width:100px; padding: 5px; border-radius:20%;')
+                option(value='supply') supply
+                option(value='repair') repair
+                option(value='issue') issue
+                option(value='exchange') exchange
+              label.col-md-1 Date:
+              .col-md-3
+                .input-group
+                  span.input-group-addon
+                    i.fa.fa-calendar(arial-hidden='true')
+                  input#time1.form-control(type='date', name='date', style='border-radius: 10px;')
+              label.col-md-1 Time:
+              .col-md-1
+                .input-group
+                  span.input-group-addon
+                    i.fa.fa-clock-o(arial-hidden='true')
+                  input#data1.form-control(type='time', name='time', style='border-radius: 10px;')
+            // table
+            .container.col-md-12
+              .row.clearfix
+                .table-responsive
+                  table#tab_logic.table.table-bordered.table-hover.table-sortable
+                    thead
+                      tr
+                        th.text-center Serial No
+                        th.text-center Material
+                        th.text-center Quantity
+                        th.text-center Returnable
+                        th.text-center Date
+                        th.text-center Time
+                        th.text-center 
+                          input#addbtn-c.btn.btn-info(type='button', value='ADD', onclick='JSalert()')
+                    tbody.chapter
+                      tr
+                        td(data-name='serialno')
+                          input#sno.form-control(type='text', name='serialno', placeholder='serialno')
+                        td(data-name='material')
+                          input#material.form-control(type='text', name='material', placeholder='material')
+                        td(data-name='quantity')
+                          input#quantity.form-control(type='text', name='quantity', placeholder='quantity')
+                        td(data-name='returnable')
+                          select#select(name='select')
+                            option(value='') Select Option
+                            option(value='1') yes
+                            option(value='2') no
+                        td(data-name='date')
+                          input#date.form-control(type='date', name='date0')
+                        td(data-name='time')
+                          input#time.form-control(type='time', name='time0')
+            .container.col-md-12
+              .row
+                h3 Transport Details
+                hr(style='border-color: red;', align='left', width='90%')
+                .row
+                  .ui-widget
+                    .form-group.col-md-5(style='margin-left: 90px;')
+                      label.control-label.col-md-5(for='source')
+                        b Source:
+                      .input-group
+                        span.input-group-addon
+                          i.fa.fa-circle(arial-hidden='true')
+                        input#source.form-control(name='from', placeholder='from place', style='border-radius: 10px;')
+                .row
+                  .ui-widget
+                    .form-group.col-md-5(style='margin-left: 90px;')
+                      label.control-label.col-md-5(for='destination')
+                        b Destination:
+                      .input-group
+                        span.input-group-addon
+                          i.fa.fa-map-marker(arial-hidden='true')
+                        input#destination.form-control(name='to', placeholder='to place', style='border-radius: 10px;')
+                .row
+                  .form-group.col-md-5(style='margin-left: 90px;')
+                    label.control-label.col-md-5 Contact No :
+                    .input-group
+                      span.input-group-addon
+                        i.fa.fa-phone(arial-hidden='true')
+                      input#contactno.form-control(type='text', name='cno', placeholder='sender contact number', style='border-radius: 10px; font-size:15px;')
+                .form-group.col-md-5(style='margin-left: 90px; ;')
+                  label.control-label.col-md-5
+                    b Vehicle Number:
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-bus(arial-hidden='true')
+                    input#vehicleno.form-control(type='text', name='vno', placeholder='enter vehicle number', style='border-radius: 10px; font-size:15px;')
+              .row
+                .form-group.col-md-5(style='margin-left: 90px;')
+                  label.control-label.col-md-5
+                    b VehicleType:
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-truck(arial-hidden='true')
+                    input#vehicletype.form-control(type='text', name='vtype', placeholder='enter type of vehicle', style='border-radius:10px; font-size:15px;')
+              .row
+                .form-group.col-md-5(style='margin-left: 90px;')
+                  label.control-label.col-md-5 Person Name:
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-user-o(arial-hidden='true')
+                    input#personname.form-control(type='text', name='name1', placeholder=' Driver Name', style='border-radius:10px ; font-size:15px;')
+              .row
+                .form-group.col-md-5(style='margin-left: 90px;')
+                  label.control-label.col-md-5 Person No:
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-phone-square(arial-hidden='true')
+                    input#personno.form-control(type='text', name='pno', placeholder=' Driver Number', style='border-radius: 10px; font-size:15px;')
+              .row
+                .ui-widget
+                  .form-group.col-md-5(style='margin-left: 90px;')
+                    label.control-label.col-md-5 Insructed By
+                    .input-group
+                      span.input-group-addon
+                        i.fa.fa-user-secret(arial-hidden='true')
+                      input#splperson.form-control(type='text', name='splperson', placeholder='Instructed By', style='border-radius: 10px; font-size:15px;')
+              .row
+                .form-group.col-md-5(style='margin-left: 90px;')
+                  label.control-label.col-md-5 Remarks :
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-exclamation(arial-hidden='true')
+                    textarea#remarks.form-control(placeholder='enter opinion', name='remarks', style='border-radius: 10px;')
+            .container.col-md-12
+              center
+                button.btn.btn-info
+                  input#save(type='button', name='save', value='save', style='color:black;')
+>>>>>>> 02294014a58d0473db7a9d1eab416659b2ec7c94

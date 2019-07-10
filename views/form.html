@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Row</title>
+  <!-- bootstrap links -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- autocomplete -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- table -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://use.fontawesome.com/0d4dee6319.js"></script>
+  <!--font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/mform1.css">
+  <script src="javascripts/autocomplete.js"></script>
+  <!--new table links -->
+  <script src="javascripts/newtable.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/newtable.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<div class="col-md-12">
+<div class="col-md-10 col-md-offset-1">
+  <div class="form-group">
+    <div class="well">
+    <h1 align="center"><b>ADITYA EDUCATIONAL INSTITUTIONS</b></h2>
+    <h3 align="center"><b>SURAMPALEM</b></h3>
+  </div> 
+<!-- form -->
+<form action="/save" method="post">
+  <div class=" well col-md-12">
+    <h3>MATERIAL OUTWARD PASS</h3>
+    <hr style="border-color: red;"><br>
+    <label class="col-md-1">Outward no:</label>
+    <div class="col-md-2"> 
+      <div class="input-group">
+      <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-sort-numeric-desc" arial-hidden="true"></i></span>
+      <input type="text" name="outwardno" value="" placeholder="outward number" class="form-control" style="border-radius: 10px; font-size:13px;">
+      </div>
+    </div>
+    <label class="col-md-1">Reason</label>
+    <select  name="reason" class="col-md-1 custom-select" style="width:100px; padding: 5px; border-radius:20%">
+      <option value="supply">supply</option>
+      <option value="repair">repair</option>
+      <option value="issue">issue</option>
+      <option value="exchange">exchange</option>
+    </select>
+    <label class="col-md-1">Date:</label>
+     <div class="col-md-3">
+      <div class="input-group">
+        <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-calendar" arial-hidden="true"></i></span> 
+        <input type="date" name="date" class="form-control" style="border-radius: 10px;">
+      </div>
+    </div>
+    <label class="col-md-1">Time:</label>
+    <div class="col-md-1"> 
+      <div class="input-group">
+        <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-clock-o" arial-hidden="true"></i></span>
+        <input type="time" name="time" class="form-control" style="border-radius: 10px;">
+      </div>
+    </div>      
+  </div>
+  </div>
+  <div class="row"> 
+  <div class="ui-widget">
+    <div class="form-group col-md-4" style="margin-left: 90px;">
+      <label for="source" class="control-label col-md-5"><b>Source:</b></label>
+      <div class="input-group">
+        <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-circle" arial-hidden="true"></i></span>
+        <input id="source" name="from" placeholder="from place" class="form-control" style="border-radius: 10px;">
+      </div> 
+    </div>
+    <div class="form-group col-md-4" style="margin-left: 90px;">
+      <label for="destination" class="control-label col-md-5"><b>Destination:</b></label>
+      <div class="input-group">
+        <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-map-marker" arial-hidden="true"></i></span>
+        <input id="destination" name="to" placeholder="to place" class="form-control" style="border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+  </div>    
+  <!-- table -->
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-md-12 table-responsive">
+      <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+        <thead>
+          <tr >
+            <th class="text-center">Serial No</th>
+            <th class="text-center">Material</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Returnable</th>
+            <th class="text-center">Date</th>
+            <th class="text-center">Time</th>
+            <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">Delete
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id='addr0' data-id="0" class="hidden">
+            <td data-name="serialno">
+              <input type="text" name='serialno0'  placeholder='serialno' class="form-control"/>
+            </td>
+            <td data-name="material">
+              <input type="text" name='material0' placeholder='material' class="form-control"/>
+            </td>
+            <td data-name="quantity">
+              <input type="text" name="quantity0" placeholder="quantity" class="form-control"/>
+            </td>
+            <td data-name="returnable">
+              <select name="sel0">
+                <option value="">Select Option</option>
+                <option value="1">yes</option>
+                <option value="2">no</option>
+              </select>
+            </td>
+            <td data-name="date">
+              <input type="date" name='date0'  class="form-control"/>
+            </td>
+            <td data-name="time">
+              <input type="time" name='time0'  class="form-control"/>
+            </td>
+            <td data-name="del">
+              <button nam="del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>
+            </td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <a id="add_row" class="btn btn-default pull-right">Add Row</a>
+</div>
+
+  </center>
+  <div class="container">
+    <div class="row">
+      <h3>Transport Details</h3>
+      <hr style="border-color: red;" align="left" width="90%">
+      <div class="form-group col-md-4" style="margin-left: 90px; ">
+        <label class="control-label col-md-5"><b>Vehicle Number:</b></label>
+        <div class="input-group">
+          <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-bus" arial-hidden="true"></i></span>
+          <input type="text" name="vno" placeholder="enter vehicle number" class="form-control" style="border-radius: 20px; font-size:15px;">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4" style="margin-left: 90px;">
+        <label class="control-label col-md-5"><b>Vehicle Type:</b></label>
+        <div class="input-group">
+          <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-truck" arial-hidden="true"></i></span> 
+          <input type="text" name="vtype" placeholder="enter type of vehicle" class="form-control" style="border-radius:20px; font-size:15px;">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4" style="margin-left: 90px;">
+        <label class="control-label col-md-5">Person Name :</label>
+        <div class="input-group">
+          <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-user-o" arial-hidden="true"></i></span> 
+          <input type="text" name="name1" placeholder=" Driver Name" class="form-control" style="border-radius:20px ; font-size:15px;" >
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4" style="margin-left: 90px;">
+        <label class="control-label col-md-5">Person No:</label>
+        <div class="input-group">
+          <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-phone-square" arial-hidden="true"></i></span> 
+          <input type="text" name="pno" placeholder=" Driver Number" class="form-control" style="border-radius: 20px; font-size:15px;">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4" style="margin-left: 90px;">
+        <label class="control-label col-md-5">Contact No :</label>
+        <div class="input-group">
+          <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-phone" arial-hidden="true"></i></span> 
+          <input type="text" name="cno" placeholder="sender contact number" class="form-control" style="border-radius: 20px; font-size:15px;">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    <div class="ui-widget">
+      <div class="form-group col-md-4" style="margin-left: 90px;">
+        <label class="control-label col-md-5">Insructed By</label>
+        <div class="input-group">
+          <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-user-secret" arial-hidden="true"></i></span> 
+          <input id="splperson"type="text" name="splperson" placeholder="Instructed By" class="form-control" style="border-radius: 20px; font-size:15px;">
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4" style="margin-left: 90px;">
+        <label class="control-label col-md-5">Remarks :</label>
+        <div class="input-group">
+          <span class="input-group-addon" style="border-radius: 19px;"><i class="fa fa-exclamation" arial-hidden="true"></i></span> 
+          <textarea placeholder="enter opinion" name="remarks"style="border-radius: 20px;" class="form-control"></textarea> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <center>
+    <button class="btn btn-info"><input type="submit" name="save" value="save" style="color:black"></input></button>
+  </center>
+</form>
+</div>
+</div>
+</body>
+</html>

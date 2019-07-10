@@ -1,0 +1,153 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+    // autocomplete
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    // table
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='https://use.fontawesome.com/0d4dee6319.js')
+    // font awesome
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/mform1.css')
+    script(src='javascripts/autocomplete.js')
+    script(src='javascripts/table.js')
+    title
+    script(src='javascripts/edit.js')
+  body
+    center
+      form(action='/edit', method='post')
+        label Outward No:
+        input(type='text', placeholder='enter Outward No', style='width: 200px; font-size:15px;')
+        input.btn.btn-info.edit(type='button', name='edit', value=member._id)
+        .dontshow
+          .col-md-12
+            .col-md-10.col-md-offset-1
+              .form-group
+                form(action='/update', method='post')
+                  .well.col-md-12
+                    h3 MATERIAL OUTWARD PASS
+                    hr(style='border-color: red;')
+                    br
+                    label.col-md-1 Outward no:
+                    .col-md-2
+                      .input-group
+                        span.input-group-addon(style='border-radius: 19px;')
+                          i.fa.fa-sort-numeric-desc(arial-hidden='true')
+                        input#outwardno.form-control(type='text', name='outwardno', value='', placeholder='outward number', style='border-radius: 10px; font-size:13px;')
+                    label.col-md-1 Reason
+                    select.col-md-1.custom-select(name='reason', style='width:100px; padding: 5px; border-radius:20%')
+                      option(value='supply') supply
+                      option(value='repair') repair
+                      option(value='issue') issue
+                      option(value='exchange') exchange
+                    label.col-md-1 Date:
+                    .col-md-3
+                      .input-group
+                        span.input-group-addon(style='border-radius: 19px;')
+                          i.fa.fa-calendar(arial-hidden='true')
+                        input.form-control(type='date', name='date', style='border-radius: 10px;')
+                    label.col-md-1 Time:
+                    .col-md-1
+                      .input-group
+                        span.input-group-addon(style='border-radius: 19px;')
+                          i.fa.fa-clock-o(arial-hidden='true')
+                        input.form-control(type='time', name='time', style='border-radius: 10px;')
+              .row
+                .ui-widget
+                  .form-group.col-md-4(style='margin-left: 90px;')
+                    label.control-label.col-md-5(for='source')
+                      b Source:
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-circle(arial-hidden='true')
+                      input#source.form-control(name='from', placeholder='from place', style='border-radius: 10px;')
+                  .form-group.col-md-4(style='margin-left: 90px;')
+                    label.control-label.col-md-5(for='destination')
+                      b Destination:
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-map-marker(arial-hidden='true')
+                      input#destination.form-control(name='to', placeholder='to place', style='border-radius: 10px;')
+              .content
+                h3 Material Catalogue
+                hr(style='border-color: red;')
+                br
+                table
+                  thead
+                    tr
+                      th Serial No.
+                      th Widget
+                      th Density
+                      th Returnable
+                      th Date
+                      th Time
+                      th Edit
+                      th Delete
+                  tbody
+                    tr.add-row
+                      td.new-row(colspan='8')
+                      i.fa.fa-plus(aria-hidden='true')
+                        |  Add New Row
+              .container
+                .row
+                  h3 Transport Details
+                  hr(style='border-color: red;', align='left', width='90%')
+                  .form-group.col-md-4(style='margin-left: 90px; ')
+                    label.control-label.col-md-5
+                      b Vehicle Number:
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-bus(arial-hidden='true')
+                      input.form-control(type='text', name='vno', placeholder='enter vehicle number', style='border-radius: 20px; font-size:15px;')
+                .row
+                  .form-group.col-md-4(style='margin-left: 90px;')
+                    label.control-label.col-md-5
+                      b Vehicle Type:
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-truck(arial-hidden='true')
+                      input.form-control(type='text', name='vtype', placeholder='enter type of vehicle', style='border-radius:20px; font-size:15px;')
+                .row
+                  .form-group.col-md-4(style='margin-left: 90px;')
+                    label.control-label.col-md-5 Person Name :
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-user-o(arial-hidden='true')
+                      input.form-control(type='text', name='name1', placeholder=' Driver Name', style='border-radius:20px ; font-size:15px;')
+                .row
+                  .form-group.col-md-4(style='margin-left: 90px;')
+                    label.control-label.col-md-5 Person No:
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-phone-square(arial-hidden='true')
+                      input.form-control(type='text', name='pno', placeholder=' Driver Number', style='border-radius: 20px; font-size:15px;')
+                .row
+                  .form-group.col-md-4(style='margin-left: 90px;')
+                    label.control-label.col-md-5 Contact No :
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-phone(arial-hidden='true')
+                      input.form-control(type='text', name='cno', placeholder='sender contact number', style='border-radius: 20px; font-size:15px;')
+                .row
+                  .form-group.col-md-4(style='margin-left: 90px;')
+                    label.control-label.col-md-5 Insructed By
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-user-secret(arial-hidden='true')
+                      input.form-control(type='text', name='splperson', placeholder='Instructed By', style='border-radius: 20px; font-size:15px;')
+                .row
+                  .form-group.col-md-4(style='margin-left: 90px;')
+                    label.control-label.col-md-5 Remarks :
+                    .input-group
+                      span.input-group-addon(style='border-radius: 19px;')
+                        i.fa.fa-exclamation(arial-hidden='true')
+                      textarea.form-control(placeholder='enter opinion', name='remarks', style='border-radius: 20px;')
+              center
+                button.btn.btn-info
+                  input(type='submit', name='update', value='update', style='color:black')
+      

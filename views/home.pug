@@ -1,0 +1,523 @@
+html
+  head
+    title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Dashboard')
+    meta(name='keyword', content='Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
+    title Title
+    link(type='image/png', href='images/adityalogo.png', rel='icon')
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+    script(src='javascripts/jquery-1.11.1.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    // external css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    // Custom styles for this template
+    link(href='stylesheets/style1.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style-responsive.css', rel='stylesheet')
+    // Data tables CSS
+    link(rel='stylesheet', type='text/css', href='stylesheets/buttons.dataTables.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/jquery.dataTables.min.css')
+    link(href='stylesheets/dataTables.bootstrap.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='stylesheets/home.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/home1.css')
+    // form links
+    link(rel='stylesheet', type='text/css', href='stylesheets/mform1.css')
+    script(src='javascripts/autocomplete.js')
+    // autocomplete
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    // table
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='https://use.fontawesome.com/0d4dee6319.js')
+    // font awesome
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/mform1.css')
+    script(src='javascripts/edit.js')
+    script(src='javascripts/table.js')    
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js')
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+    // datatable links
+    script(src='javascripts/tabledata.js')
+    link(rel='stylesheet', type='text/css', href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+    link(rel='stylesheet', type='text/css', href='https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css')
+    script(type='text/javascript', src='https://code.jquery.com/jquery-3.3.1.js')
+    script(type='text/javascript', src='https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+    script(type='text/javascript', src='https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js')
+    script(type='text/javascript', src='https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js')
+    script(type='text/javascript', src='https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js')
+    script(type='text/javascript', src='https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js')
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    // table
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='https://use.fontawesome.com/0d4dee6319.js')
+    // font awesome
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/mform1.css')
+    script(src='javascripts/autocomplete.js')
+    script(src='javascripts/table.js')
+    script(src='javascripts/edit.js')
+    link(rel='stylesheet', type='text/css', href='stylesheets/addtable.css')
+    script(src='javascripts/addtable.js')
+    script(src='javascripts/date.js')
+    script(src='javascripts/time.js')
+    script(src='javascripts/randomnumbers.js')
+  body(onload='randomStringToInput();')
+    section#container
+      // header start
+      header.header.black-bg
+        .sidebar-toggle-box
+          .fa.fa-bars.tooltips(data-placement='right', data-original-title='Toggle Navigation')
+        // logo start
+        a.logo(href='#')
+          b
+            img(src='images/myhub_logo.png', style='height:55px;width:100px;margin-top:-13px;')
+        // logo end
+        .top-menu
+          ul.nav.pull-right.top-menu
+            li
+              a.logout(href='/logout') Logout
+      // header end
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul#nav-accordion.sidebar-menu
+            p.centered
+              a(href='#')
+                img.img-circle(src='images/user.png', width='80')
+            h5.centered
+              p My Project
+            li.sub-menu
+              a(data-toggle='tab', href='#tab1')
+                i.fa.fa-file-text
+                span Form
+            li.sub-menu
+              a(data-toggle='tab', href='#tab2')
+                i.fa.fa-database
+                span Data Base
+            li.sub-menu
+              a(data-toggle='tab', href='#tab3')
+                i.fa.fa-upload
+                span Return
+        // sidebar menu end
+        // sidebar end
+        // main content start
+        section#main-content
+          section.wrapper.site-min-height
+            .row.mt
+              .col-lg-12
+                .tab-content
+                  #tab1.tab-pane.fade.in.active
+                    center
+                      .row.dashboard-stats.container
+                        .col-md-2.col-sm-6.col-md-offset-6
+                          section.panel.panel-box
+                            .panel-left.panel-icon.bg-lovender
+                              i.fa.fa-file-text
+                            .panel-right.panel-icon.bg-reverse
+                              p.text-muted.no-margin.text
+                                span  
+                              p.size-h1 Form
+                      center
+                        .container(style='background-color: #ffffff;width: 100%;border-radius: 1px;')
+                          .row
+                            .col-md-12
+                              // code here
+                              .form-group
+                                .well
+                                  h1(align='center')
+                                    b ADITYA EDUCATIONAL INSTITUTIONS
+                                  h3(align='center')
+                                    b SURAMPALEM
+                                // form
+                                form(action='/save', method='post')
+                                  .well.col-md-12
+                                    h3 MATERIAL OUTWARD PASS
+                                    hr(style='border-color: red;')
+                                    br
+                                    label.col-md-1 Outward no:
+                                    .col-md-2
+                                      .input-group
+                                        span.input-group-addon
+                                          i.fa.fa-sort-numeric-desc(arial-hidden='true')
+                                        input.outwardno.form-control(type='text', name='outwardno', value='', placeholder='outward number', style='font-size:13px;' readonly)
+                                    label.col-md-1 Reason
+                                    select#select1.col-md-1.custom-select(name='reason', style='width:100px; padding: 5px; border-radius:20%;')
+                                      option(value='supply') supply
+                                      option(value='repair') repair
+                                      option(value='issue') issue
+                                      option(value='exchange') exchange
+                                    label.col-md-1 Date:
+                                    .col-md-3
+                                      .input-group
+                                        span.input-group-addon
+                                          i.fa.fa-calendar(arial-hidden='true')
+                                        input#date1.Date.form-control(type='text', name='date')
+                                    label.col-md-1 Time:
+                                    .col-md-1
+                                      .input-group
+                                        span.input-group-addon
+                                          i.fa.fa-clock-o(arial-hidden='true')
+                                        input.form-control(type='time', name='time', value='now')
+                                  // table
+                                  .container.col-md-12
+                                    .row.clearfix
+                                      .table-responsive
+                                        table#tab_logic.table.table-bordered.table-hover.table-sortable
+                                          thead
+                                            tr
+                                              th.text-center Serial No
+                                              th.text-center Material
+                                              th.text-center Quantity
+                                              th.text-center Returnable
+                                              th.text-center Date
+                                              th.text-center Time
+                                              th.text-center 
+                                                input#addbtn-c.btn.btn-info(type='button', value='ADD', onclick='JSalert()')
+                                          tbody.chapter
+                                            tr
+                                              td(data-name='serialno')
+                                                input#sno.form-control(type='text', name='serialno', placeholder='serialno',style='font-size:15px;')
+                                              td(data-name='material')
+                                                input#material.form-control(type='text', name='material', placeholder='material',style='font-size:15px;')
+                                              td(data-name='quantity')
+                                                input#quantity.form-control(type='text', name='quantity', placeholder='quantity',style='font-size:15px;')
+                                              td(data-name='returnable')
+                                                select#select(name='select')
+                                                  option(value='yes') yes
+                                                  option(value='no') no
+                                              td(data-name='date')
+                                                input#date.Date.form-control(type='text', name='date0',style='font-size:15px;')
+                                              td(data-name='time')
+                                                input#time.form-control(type='time', name='time0',value='now' style='border-radius: 10px;')
+                                  .container.col-md-12
+                                    .row
+                                      h3 Transport Details
+                                      hr(style='border-color: red;', align='left', width='90%')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px;')
+                                          label.control-label.col-md-5
+                                            b Source:
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-circle(arial-hidden='true')
+                                            input#source.form-control(type='text', name='from', placeholder='from place', style='font-size:15px;')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px;')
+                                          label.control-label.col-md-5
+                                            b Destination:
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-map-marker(arial-hidden='true')
+                                            input#destination.form-control(type='text', name='to', placeholder='to place', style='font-size:15px;')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px;')
+                                          label.control-label.col-md-5
+                                            b Contact No :
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-phone(arial-hidden='true')
+                                            input#contactno.form-control(type='text', name='cno', placeholder='sender contact number', style='font-size:15px;')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px; ;')
+                                          label.control-label.col-md-5
+                                            b Vehicle Number:
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-bus(arial-hidden='true')
+                                            input#vehicleno.form-control(type='text', name='vno', placeholder='enter vehicle number', style='font-size:15px;')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px;')
+                                          label.control-label.col-md-5
+                                            b VehicleType:
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-truck(arial-hidden='true')
+                                            input#vehicletype.form-control(type='text', name='vtype', placeholder='enter type of vehicle', style='font-size:15px;')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px;')
+                                          label.control-label.col-md-5
+                                            b Person Name:
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-user-o(arial-hidden='true')
+                                            input#personname.form-control(type='text', name='name1', placeholder=' Driver Name', style='font-size:15px;')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px;')
+                                          label.control-label.col-md-5
+                                            b Person No:
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-phone-square(arial-hidden='true')
+                                            input#personno.form-control(type='text', name='pno', placeholder=' Driver Number', style='font-size:15px;')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px;')
+                                          label.control-label.col-md-5
+                                            b Insructed By
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-user-secret(arial-hidden='true')
+                                            input#splperson.form-control(type='text', name='splperson', placeholder='Instructed By', style='font-size:15px;')
+                                      .row
+                                        .form-group.col-md-5(style='margin-left: 90px;')
+                                          label.control-label.col-md-5
+                                            b Remarks :
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-exclamation(arial-hidden='true')
+                                            textarea#remarks.form-control(placeholder='enter opinion', name='remarks')
+                                    .container.col-md-12
+                                      .row
+                                        .col-md-2.col-md-offset-2
+                                          button.btn.btn-info
+                                            input#save.btn.btn-info(type='button', name='save', value='save', style='color:black;')
+                                        .col-md-2.col-md-offset-2
+                                          button.btn.btn-info
+                                            input#download.btn.btn-info(type='button', name='download', value='download', style='color:black;')  
+                  #tab2.tab-pane.fade.align
+                    center
+                      .row.dashboard-stats.container
+                        .col-md-2.col-sm-6.col-md-offset-6
+                          section.panel.panel-box
+                            .panel-left.panel-icon.bg-lovender
+                              i.fa.fa-database
+                            .panel-right.panel-icon.bg-reverse
+                              p.text-muted.no-margin.text
+                                span  
+                              p.size-h1 Data base
+                      center
+                        .container(style='background-color: #ffffff;width: 100%;border-radius: 1px;')
+                          .row
+                            .col-md-12
+                              // code here
+                              .table-responsive 
+                                table#example.display(style='width:100%')
+                                  thead
+                                    tr
+                                      th Outward No
+                                      th Reason
+                                      th Date
+                                      th Time
+                                      th Serialno
+                                      th material
+                                      th quantity
+                                      th Returnable
+                                      th Date
+                                      th Time
+                                      th source
+                                      th Destination
+                                      th vehicle no
+                                      th Vehicle Type
+                                      th Person Name
+                                      th person No
+                                      th Contact No
+                                      th Insructed By
+                                      th Remarks
+                                      th action
+                                  tbody
+                                    each member in data
+                                      tr
+                                        td #{member.products.outwardno}
+                                        td #{member.products.reason}
+                                        td #{member.products.date}
+                                        td #{member.products.time}
+                                        td #{member.products.serialno}
+                                        td #{member.products.material}
+                                        td #{member.products.quantity}
+                                        td #{member.products.select}
+                                        td #{member.products.date0}
+                                        td #{member.products.time0}
+                                        td #{member.products.from}
+                                        td #{member.products.to}
+                                        td #{member.products.vno}
+                                        td #{member.products.vtype}
+                                        td #{member.products.name1}
+                                        td #{member.products.pno}
+                                        td #{member.products.cno}
+                                        td #{member.products.splperson}
+                                        td #{member.products.remarks}
+                                        td
+                                          button(value=member._id style="margin-left:8px").btn.btn-danger.remove remove       
+                  #tab3.tab-pane.fade.align
+                    center
+                      .row.dashboard-stats.container
+                        .col-md-2.col-sm-6.col-md-offset-6
+                          section.panel.panel-box
+                            .panel-left.panel-icon.bg-lovender
+                              i.fa.fa-upload
+                            .panel-right.panel-icon.bg-reverse
+                              p.text-muted.no-margin.text
+                                span  
+                              p.size-h1 Return
+                      center
+                        .container(style='background-color: #ffffff;width: 100%;border-radius: 1px;')
+                          .row
+                            .col-md-4.col-md-offset-4
+                              // code here
+                              center
+                                  .form-group
+                                    label.control-label 
+                                      b Outward No:                                    
+                                      .input-group
+                                        span.input-group-addon
+                                          i.fa.fa-sort-numeric-desc(arial-hidden='true')
+                                        input.form-control#out(type='text',name='outwardno' placeholder='enter outward no' style='border-radius:10px; font-size:13px;')
+                          .row 
+                            button.btn.btn-info.edit(type='button', name='edit') Get
+                            .col-md-12
+                              .dontshow
+                                .col-md-12
+                                  .form-group
+                                    .well
+                                      h1(align='center')
+                                        b ADITYA EDUCATIONAL INSTITUTIONS
+                                      h3(align='center')
+                                        b SURAMPALEM
+                                    // form
+                                    form(action='/update', method='post')
+                                      .well.col-md-12
+                                        h3 MATERIAL OUTWARD PASS
+                                        hr(style='border-color: red;')
+                                        br
+                                        label.col-md-1 Outward no:
+                                        .col-md-2
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-sort-numeric-desc(arial-hidden='true')
+                                            input#outwardno2.form-control(type='text', name='outwardno', value='', placeholder='outward number', style='font-size:13px;')
+                                        label.col-md-1 Reason
+                                        select#select2.col-md-1.custom-select(name='reason', style='width:100px; padding: 5px; border-radius:20%;')
+                                          option(value='supply') supply
+                                          option(value='repair') repair
+                                          option(value='issue') issue
+                                          option(value='exchange') exchange
+                                        label.col-md-1 Date:
+                                        .col-md-3
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-calendar(arial-hidden='true')
+                                            input#date2.form-control(type='date', name='date')
+                                        label.col-md-1 Time:
+                                        .col-md-1
+                                          .input-group
+                                            span.input-group-addon
+                                              i.fa.fa-clock-o(arial-hidden='true')
+                                            input#time2.form-control(type='time', name='time')
+                                      // table
+                                      .container.col-md-12
+                                        .row.clearfix
+                                          .table-responsive
+                                            table#tab_logic.table.table-bordered.table-hover.table-sortable
+                                              thead
+                                                tr
+                                                  th.text-center Serial No
+                                                  th.text-center Material
+                                                  th.text-center Quantity
+                                                  th.text-center Returnable
+                                                  th.text-center Date
+                                                  th.text-center Time
+                                                  th.text-center 
+                                                    input#addbtn-c.btn.btn-info(type='button', value='ADD', onclick='JSalert()')
+                                              tbody.chapter
+                                                tr
+                                                  td(data-name='serialno')
+                                                    input#sno2.form-control(type='text', name='serialno', placeholder='serialno')
+                                                  td(data-name='material')
+                                                    input#material2.form-control(type='text', name='material', placeholder='material')
+                                                  td(data-name='quantity')
+                                                    input#quantity2.form-control(type='text', name='quantity', placeholder='quantity')
+                                                  td(data-name='returnable')
+                                                    select#select21(name='select')
+                                                      option(value='yes') yes
+                                                      option(value='no') no
+                                                  td(data-name='date')
+                                                    input#date21.form-control(type='date', name='date0')
+                                                  td(data-name='time')
+                                                    input#time21.form-control(type='time', name='time0')
+                                      .container.col-md-12
+                                        .row
+                                          h3 Transport Details
+                                          hr(style='border-color: red;', align='left', width='90%')
+                                          .form-group.col-md-4(style='margin-left: 90px; ')
+                                            label.control-label.col-md-5
+                                              b Vehicle Number:
+                                            .input-group
+                                              span.input-group-addon(style='border-radius: 19px;')
+                                                i.fa.fa-bus(arial-hidden='true')
+                                              input#vehicleno2.form-control(type='text', name='vno', placeholder='enter vehicle number', style='font-size:15px;')
+                                        .row
+                                          .form-group.col-md-4(style='margin-left: 90px;')
+                                            label.control-label.col-md-5
+                                              b Vehicle Type:
+                                            .input-group
+                                              span.input-group-addon(style='border-radius: 19px;')
+                                                i.fa.fa-truck(arial-hidden='true')
+                                              input#vehicletype2.form-control(type='text', name='vtype', placeholder='enter type of vehicle', style='font-size:15px;')
+                                        .row
+                                          .form-group.col-md-4(style='margin-left: 90px;')
+                                            label.control-label.col-md-5 Person Name :
+                                            .input-group
+                                              span.input-group-addon(style='border-radius: 19px;')
+                                                i.fa.fa-user-o(arial-hidden='true')
+                                              input#personname2.form-control(type='text', name='name1', placeholder=' Driver Name', style='font-size:15px;')
+                                        .row
+                                          .form-group.col-md-4(style='margin-left: 90px;')
+                                            label.control-label.col-md-5 Person No:
+                                            .input-group
+                                              span.input-group-addon(style='border-radius: 19px;')
+                                                i.fa.fa-phone-square(arial-hidden='true')
+                                              input#personno2.form-control(type='text', name='pno', placeholder=' Driver Number', style='font-size:15px;')
+                                        .row
+                                          .form-group.col-md-4(style='margin-left: 90px;')
+                                            label.control-label.col-md-5 Contact No :
+                                            .input-group
+                                              span.input-group-addon(style='border-radius: 19px;')
+                                                i.fa.fa-phone(arial-hidden='true')
+                                              input.form-control(type='text', name='cno', placeholder='sender contact number', style='font-size:15px;')
+                                        .row
+                                          .form-group.col-md-4(style='margin-left: 90px;')
+                                            label.control-label.col-md-5 Insructed By
+                                            .input-group
+                                              span.input-group-addon(style='border-radius: 19px;')
+                                                i.fa.fa-user-secret(arial-hidden='true')
+                                              input#splperson2.form-control(type='text', name='splperson', placeholder='Instructed By', style='font-size:15px;')
+                                        .row
+                                          .form-group.col-md-4(style='margin-left: 90px;')
+                                            label.control-label.col-md-5 Remarks :
+                                            .input-group
+                                              span.input-group-addon(style='border-radius: 19px;')
+                                                i.fa.fa-exclamation(arial-hidden='true')
+                                              textarea#remarks2.form-control(placeholder='enter opinion', name='remarks', style='font-size:15px;')
+                                      .container.col-md-12
+                                          center
+                                            input.btn.btn-info#update(type='button', name='update', value='update', style='color:black;')
+                              // MAIN CONTENT
+                              // main content end
+                              // js placed at the end of the document so the pages load faster
+                              script(src='javascripts/jquery.js')
+                              script(src='javascripts/bootstrap.min.js')
+                              script(src='javascripts/jquery-ui-1.9.2.custom.min.js')
+                              script(src='javascripts/jquery.ui.touch-punch.min.js')
+                              script(src='javascripts/jquery.dcjqaccordion.2.7.js')
+                              script(src='javascripts/jquery.scrollTo.min.js')
+                              script(src='javascripts/jquery.nicescroll.js')
+                              // common script for all pages
+                              script(src='javascripts/common-scripts.js')
+                              script(src='javascripts/jquery.dataTables.min.js')
+                              script(src='javascripts/dataTables.buttons.min.js')
+                              script(src='javascripts/buttons.flash.min.js')
+                              script(src='javascripts/jszip.min.js')
+                              script(src='javascripts/pdfmake.min.js')
+                              script(src='javascripts/vfs_fonts.js')
+                              script(src='javascripts/buttons.html5.min.js')
+                              script(src='javascripts/buttons.print.min.js')
